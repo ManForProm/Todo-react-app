@@ -1,7 +1,7 @@
 import {
   DarkTheme,
   DefaultTheme,
-  ThemeProvider
+  ThemeProvider,
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useFonts } from "expo-font";
@@ -35,21 +35,21 @@ export default function RootLayout() {
   }
 
   return (
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack.Navigator>
-          {/* Replace '(tabs)' with an actual component */}
-          <Stack.Screen
-            name="(tabs)"
-            component={TaskListScreen}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen name="AddTask" component={AddTaskScreen} />
-          <Stack.Screen
-            name="NotFound"
-            component={NotFoundScreen} // Add a component for not found screen
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </ThemeProvider>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <Stack.Navigator>
+        {/* Replace '(tabs)' with an actual component */}
+        <Stack.Screen
+          name="(tabs)"
+          component={TaskListScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="AddTask" component={AddTaskScreen} />
+        <Stack.Screen
+          name="NotFound"
+          component={NotFoundScreen} // Add a component for not found screen
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </ThemeProvider>
   );
 }

@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# Task Management App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a Task Management App built with React Native. The app allows users to create, manage, and track their tasks with ease. The application supports both Android and iOS platforms.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Task Creation:** Users can add new tasks with details such as title, description, date, time, and location.
+- **Task Management:** Users can view the list of tasks, including their status (e.g., In Progress, Completed, Cancelled).
+- **Date and Time Pickers:** Separate date and time pickers are provided for Android, while iOS supports a combined datetime picker.
+- **Local Storage:** Task data is stored locally on the device.
 
-   ```bash
-   npm install
-   ```
+## Technologies Used
 
-2. Start the app
+- **React Native**: For building the mobile application.
+- **Expo**: For development and testing.
+- **TypeScript**: Ensuring type safety and better development experience.
+- **React Navigation**: For handling navigation within the app.
+- **@react-native-community/datetimepicker**: For selecting dates and times.
+- **Jest**: For unit testing components and logic.
 
-   ```bash
-    npx expo start
-   ```
+## Installation
 
-In the output, you'll find options to open the app in a
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+3. **Run the app**:
+    - For Android:
+      ```bash
+      npx expo start --android
+      ```
+    - For iOS:
+      ```bash
+      npx expo start --ios
+      ```
 
-## Get a fresh project
+## Usage
 
-When you're ready, run:
+- **Add Task**: Tap on the "+" button to navigate to the Add Task screen, fill in the details, and save the task.
+- **View Tasks**: The main screen lists all the tasks with their status. Tasks are sorted by date and time.
+- **Edit/Delete Tasks**: Future updates may include functionality for editing and deleting tasks.
 
-```bash
-npm run reset-project
-```
+## File Structure
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```plaintext
+.
+├── assets
+│   └── fonts
+├── components
+│   └── FloatingActionButton.tsx
+├── models
+│   └── Task.ts
+├── screens
+│   ├── AddTaskScreen.tsx
+│   └── TaskListScreen.tsx
+├── hooks
+│   └── useColorScheme.ts
+├── App.tsx
+└── README.md
