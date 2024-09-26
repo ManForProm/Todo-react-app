@@ -11,8 +11,8 @@ import "react-native-reanimated";
 import NotFoundScreen from "./+not-found";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import AddTaskScreen from "./(screens)/AddTaskScreen";
-import TaskListScreen from "./(tabs)/index";
+import AddTaskScreen from "./AddTask";
+import TaskListScreen from "./main";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -39,11 +39,14 @@ export default function RootLayout() {
       <Stack.Navigator>
         {/* Replace '(tabs)' with an actual component */}
         <Stack.Screen
-          name="(tabs)"
+          name="main"
           component={TaskListScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="AddTask" component={AddTaskScreen} />
+        <Stack.Screen
+         name="AddTask"
+         component={AddTaskScreen} 
+         options={{ headerShown: false }}/>
         <Stack.Screen
           name="NotFound"
           component={NotFoundScreen} // Add a component for not found screen
